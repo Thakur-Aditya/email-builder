@@ -16,7 +16,8 @@ function App() {
     imageUrl: "",
     styles: [],
   });
-  const API_URL = "http://localhost:8800/api";
+  // const API_URL = "http://localhost:8800/api";
+  const API_URL = "https://email-builder-h1mi.onrender.com/api";
 
   // All existing functionality remains the same
   useEffect(() => {
