@@ -21,7 +21,13 @@ function App() {
 
   // All existing functionality remains the same
   useEffect(() => {
-    alert("here is the link for a video tour of this project https://www.youtube.com/")
+    const userResponse = window.confirm(
+      "Here is the link for a video tour of this project. Would you like to open it?"
+    );
+
+    if (userResponse) {
+      window.open("https://youtu.be/0nofnotlbV8?si=BcbJTJoECuoJF2eP", "_blank"); // Open in a new tab
+    }
     fetchTemplates();
   }, []);
 
