@@ -21,6 +21,7 @@ function App() {
 
   // All existing functionality remains the same
   useEffect(() => {
+    alert("here is the link for a video tour of this project https://www.youtube.com/")
     fetchTemplates();
   }, []);
 
