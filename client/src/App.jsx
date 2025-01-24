@@ -21,15 +21,25 @@ function App() {
 
   // All existing functionality remains the same
   useEffect(() => {
-    const userResponse = window.confirm(
-      "Here is the link for a video tour of this project. Would you like to open it?"
-    );
+    // const userResponse = window.confirm(
+    //   "Here is the link for a video tour of this project. Would you like to open it?"
+    // );
 
-    if (userResponse) {
-      window.open("https://youtu.be/0nofnotlbV8?si=BcbJTJoECuoJF2eP", "_blank"); // Open in a new tab
-    }
+    // if (userResponse) {
+    //   window.open("https://youtu.be/0nofnotlbV8?si=BcbJTJoECuoJF2eP", "_blank"); // Open in a new tab
+    // }
     fetchTemplates();
   }, []);
+
+  const handleClick = () => {
+    // const userResponse = window.confirm(
+    //   "Here is the link for a video tour of this project. Would you like to open it?"
+    // );
+
+    // if (userResponse) {
+      window.open("https://youtu.be/0nofnotlbV8?si=BcbJTJoECuoJF2eP", "_blank"); // Open in a new tab
+    // }
+  };
 
   const fetchTemplates = async () => {
     try {
@@ -146,6 +156,7 @@ function App() {
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
             Email Builder
           </h1>
+          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-semibold py-2 px-2 mb-3 rounded hover:from-yellow-500 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50" onClick={handleClick}>Watch Video Tour</button>
           <div className="flex items-center gap-4">
             <select
               className="px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
